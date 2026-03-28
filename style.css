@@ -1,161 +1,29 @@
-* {
-    font-family: 'Times New Roman', Times, serif;
-}
-
 body {
-    height: 100%;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 50px;
+  background: linear-gradient(260deg,#7b66b4,#8a66b4,#7b66b4);
 }
 
-.container {
-    width: 800px;
-    height: 100vh;
-    margin: 20px 50px;
-    background-color: aliceblue;
-    max-height: 100%;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0 0 10px white;
+.todo-card {
+  background-color: #f8f9fa;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-h1 {
-    color: #151b54;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px 0;
+.task-text {
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.head {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
+.task-completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
 }
 
-#input {
-    height: max-content;
-    width: 60%;
-    padding: 15px;
-    font-size: 15px;
-    color: #151b54;
-    border: 2px solid #151b54;
-    border-radius: 10px;
+.list-group-item {
+  transition: background-color 0.2s ease;
 }
 
-#input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #151b54;
-    
-}
-
-.btn {
-    font-size: 25px;
-    font-weight: 800;
-    color: #151b54;
-    background-color: #1e90ff;
-    border: 2px solid #151b54;
-    border-radius: 10px;
-    padding: 10px;
-    height: 100%;
-}
-
-.btn:hover {
-    color: white;
-    background-color: #151b54;
-    box-shadow: 0 0 10px #151b54;
-    cursor: pointer;
-}
-
-ol {
-    margin-left: 40px;
-    margin-bottom: 10px;
-}
-
-
-li {
-    height: 53px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 8px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    position: relative;
-}
-
-.completed {
-    color: green;
-}
-
-.badge {
-    background-color: green;
-    color: white;
-    padding: 5px 8px;
-    font-size: 15px;
-    border-radius: 18px;
-    display: none;
-}
-
-.clear {
-    float: right;
-    margin-right: 20px;
-    padding: 5px 8px;
-    font-size: 15px;
-    color: #000;
-    text-align: center;
-    border: 2px solid red;
-    border-radius: 50px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.clear:hover{
-    background-color: red;
-    color: white;
-    box-shadow: 0 0 10px red;
-}
-
-@media screen and (max-width:576px) {
-  body {
-    padding: 0;
-  }  
-
-  h1 {
-    font-size: 30px;
-  }
-
-  .container {
-    margin: 20px;
-  }
-
-  #input {
-    width: 180px;
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  #task-list {
-    margin: 8px 0 5px 10px;
-  }
-
-  li {
-    font-size: 16px;
-  }
-
-  .clear {
-    font-size: 12px;
-  }
-
-  .badge {
-    font-size: 12px;
-  }
+.list-group-item:hover {
+  background-color: #fdfdfd;
 }
